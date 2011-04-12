@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gesvec</title>
+  <%= stylesheet_link_tag 'estilo' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="main">
+		<div id="topo">
+      		<img src="/images/fortaleza-bela.gif" alt="Logo da Administração" width="250" height="80" />
+      		<h1> Sistema de Controle de Frotas </h1>
+      		<h2>Prefeitura Municipal de Fortaleza</h2>
+    	</div>
+  		<div id="info">
+	    	<dl>
+	      		<dt>Usu&aacute;rio:</dt> 
+	      		<dd>Lorem Ipsum Domini</dd>
+	      		<dt>Grupo:</dt>
+	      		<dd>Agnus</dd>
+	    	</dl>
+  		</div>
+  		<div id="menu">
+  			<ul>
+		    	<li><a href="javascript:void(0)">Administração</a>
+		        	<ul>
+			          <li><a href="javascript:void(0)">Perfil</a></li>
+			          <li><a href="javascript:void(0)">Usuários</a></li>
+			          <li><a href="javascript:void(0)">Permissão</a></li>
+		        	</ul>
+		      	</li>
+		      	<li><a href="javascript:void(0)">Sair</a></li>
+		    </ul>  
+  		</div>
+		<%= yield %>
+		<div id="rodape">
+    		Sistema adquirido com recursos do PNAFM
+    		<span class="versao"> V 2.1 </span>
+  		</div>
+	</div>
+</body>
+</html>

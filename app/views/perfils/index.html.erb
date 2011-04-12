@@ -1,0 +1,38 @@
+<div id="cadastro">
+	<h1>  Perfil </h1>
+    <fieldset>
+    	<legend>Cadastro de Perfis</legend>
+    	<%= link_to 'Novo', new_perfil_path, :class => "novo"  %>
+      	<input type="text" name="txtPesquisa" id="txtPesquisa" />
+      	<input type="submit" value="Pesquisar" />
+      	
+      	
+      	<table>
+		  <tr>
+		    <th>Id</th>
+		    <th>Nome</th>
+		    <th>Exibir</th>
+		    <th>Editar</th>
+		    <th>Excluir</th>
+		  </tr>
+		
+		<% @perfils.each do |perfil| %>
+		  <tr>
+		    <td><%= perfil.id %></td>
+		    <td><%= perfil.nome %></td>
+		    <td><%= link_to 'Show', perfil %></td>
+		    <td><%= link_to 'Edit', edit_perfil_path(perfil) %></td>
+		    <td><%= link_to 'Destroy', perfil, :confirm => 'Deseja excluir?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+		
+		<br />
+		
+    </fieldset>  	
+<div>
+
+
+
+
+
