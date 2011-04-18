@@ -1,0 +1,39 @@
+<div id="cadastro">
+	<h1>  Usuário </h1>
+    <fieldset>
+    	<legend>Cadastro de Usuários</legend>
+		<%= link_to 'Novo', new_usuario_path, :class => "novo"  %>
+      	<input type="text" name="txtPesquisa" id="txtPesquisa" />
+      	<%=submit_tag 'Pesquisar'%>
+		<table>
+		  <tr>
+		  	<th>Nº</th>
+		    <th>Nome</th>
+		    <th>Cpf</th>
+		    <th>Matricula</th>
+		    <th>Perfil</th>
+		    <th>Login</th>
+		    <th>Senha</th>
+		    <!--<th>Exibir</th>-->
+		    <th>Editar</th>
+		    <th>Excluir</th>
+		  </tr>
+		<%cont = 0%>
+		<% @usuarios.each do |usuario| %>
+		  <tr>
+		  	<%cont = cont + 1%>
+		  	<td><%=cont%></td>
+		    <td><%= usuario.nome %></td>
+		    <td><%= usuario.cpf %></td>
+		    <td><%= usuario.matricula %></td>
+		    <td><%= usuario.perfil.nome %></td>
+		    <td><%= usuario.login %></td>
+		    <td><%= usuario.senha %></td>
+		    <!--<td><%= link_to 'Show', usuario %></td>-->
+		    <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
+		    <td><%= link_to 'Destroy', usuario, :confirm => 'Are you sure?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+	</fieldset>	
+</div>

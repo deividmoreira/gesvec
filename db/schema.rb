@@ -10,12 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110411191206) do
+ActiveRecord::Schema.define(:version => 20110418175142) do
 
   create_table "perfils", :force => true do |t|
-    t.integer  "nome"
+    t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "usuarios", :force => true do |t|
+    t.string   "nome"
+    t.string   "cpf"
+    t.string   "matricula"
+    t.string   "login"
+    t.string   "senha"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "perfil_id"
   end
 
 end

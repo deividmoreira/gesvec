@@ -2,7 +2,7 @@ class CreatePerfils < ActiveRecord::Migration
   def self.up
     create_table :perfils do |t|
       t.integer :id
-      t.integer :nome
+      t.string :nome
 
       t.timestamps
     end

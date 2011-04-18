@@ -9,6 +9,14 @@ class PerfilsController < ApplicationController
       format.xml  { render :xml => @perfils }
     end
   end
+  
+  def pesquisar
+  	@perfis = Perfil.find(:first)
+  	respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @perfils }
+    end
+  end
 
   # GET /perfils/1
   # GET /perfils/1.xml
@@ -44,8 +52,8 @@ class PerfilsController < ApplicationController
 
     respond_to do |format|
       if @perfil.save
-        format.html { redirect_to(@perfil, :notice => 'Perfil was successfully created.') }
-        format.xml  { render :xml => @perfil, :status => :created, :location => @perfil }
+        format.html { redirect_to(perfils_url) }
+        format.xml  { render :xml => @perfils, :status => :created, :location => @perfils }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @perfil.errors, :status => :unprocessable_entity }
@@ -60,7 +68,7 @@ class PerfilsController < ApplicationController
 
     respond_to do |format|
       if @perfil.update_attributes(params[:perfil])
-        format.html { redirect_to(@perfil, :notice => 'Perfil was successfully updated.') }
+        format.html { redirect_to(perfils_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -4,25 +4,25 @@
     	<legend>Cadastro de Perfis</legend>
     	<%= link_to 'Novo', new_perfil_path, :class => "novo"  %>
       	<input type="text" name="txtPesquisa" id="txtPesquisa" />
-      	<input type="submit" value="Pesquisar" />
-      	
+      	<%=submit_tag 'Pesquisar'%>
       	
       	<table>
 		  <tr>
-		    <th>Id</th>
+		    <th>Nº</th>
 		    <th>Nome</th>
-		    <th>Exibir</th>
+		    <!--<th>Exibir</th>-->
 		    <th>Editar</th>
 		    <th>Excluir</th>
 		  </tr>
-		
+		<%cont = 0%>
 		<% @perfils.each do |perfil| %>
 		  <tr>
-		    <td><%= perfil.id %></td>
+		  	<%cont = cont + 1%>
+		    <td><%=  cont%></td>
 		    <td><%= perfil.nome %></td>
-		    <td><%= link_to 'Show', perfil %></td>
-		    <td><%= link_to 'Edit', edit_perfil_path(perfil) %></td>
-		    <td><%= link_to 'Destroy', perfil, :confirm => 'Deseja excluir?', :method => :delete %></td>
+		    <!--<td><%= link_to 'Mostrar', perfil%></td>-->
+		    <td><%= link_to 'Editar', edit_perfil_path(perfil), :class=>'editar' %></td>
+		    <td><%= link_to 'Excluir', perfil, :method => :delete, :confirm => "Deseja exluir?", :class=>'excluir' %></td>
 		  </tr>
 		<% end %>
 		</table>

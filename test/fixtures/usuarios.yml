@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  cpf: MyString
+  matricula: MyString
+  login: MyString
+  senha: MyString
+
+two:
+  nome: MyString
+  cpf: MyString
+  matricula: MyString
+  login: MyString
+  senha: MyString

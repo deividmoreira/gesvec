@@ -1,5 +1,11 @@
 Gesvec::Application.routes.draw do
+  resources :usuarios
+
   resources :perfils
+  
+  resources :perfils do
+  	resources :usuarios
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
