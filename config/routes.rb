@@ -1,4 +1,6 @@
 Gesvec::Application.routes.draw do
+  resources :permissaos
+
   resources :usuarios
 
   resources :perfils
