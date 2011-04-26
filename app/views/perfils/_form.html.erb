@@ -16,7 +16,8 @@
 		  	<div class="actions">
 				<%= f.label :nome %>
 				<%= f.text_field :nome %>
-				
+				<%= f.label 'Permissão'%>
+				<%= f.collection_select :permissao_id, Permissao.find(:all, :order => 'nome'), :id, :nome, {}, :multiple => true %>
 				<%= f.submit %>
 				<%= link_to 'Voltar', perfils_path %>
 		  	</div>

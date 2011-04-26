@@ -3,7 +3,9 @@
 <head>
   <title>Gesvec</title>
   <%= stylesheet_link_tag 'estilo' %>
+  <link />
   <%= stylesheet_link_tag 'autocomplete' %>
+  <%= stylesheet_link_tag 'calendar/jquery-ui-1.7.2.custom' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
@@ -33,15 +35,14 @@
   				<li><a href="javascript:void(0)">Cadastros</a>
 		        	<ul>
 			          <li><a href="javascript:void(0)">Motorista</a></li>
-			          <li><a href="javascript:void(0)">Veículo</a></li>
+			          <li><%= link_to 'Veículo', veiculos_path %></li>
 		        	</ul>
 		      	</li>
 		    	<li><a href="javascript:void(0)">Administração</a>
 		        	<ul>
-		        	  
 			          <li><%= link_to 'Perfil', perfils_path %></li>
 			          <li><%= link_to 'Usuario', usuarios_path %></li>
-			          <li><a href="javascript:void(0)">Permissão</a></li>
+			          <li><%= link_to 'Permissão', permissaos_path %></li>
 		        	</ul>
 		      	</li>
 		      	<li><a href="javascript:void(0)">Sair</a></li>
@@ -60,5 +61,6 @@
 	<%= javascript_include_tag 'funcoes.js' %>
 	<%= javascript_include_tag 'jquery.autocomplete.js' %>
 	<%= javascript_include_tag 'jquery.select-autocomplete.js' %>
+	
 </body>
 </html>

@@ -1,25 +1,27 @@
-<h1>Listing permissaos</h1>
+<div id="cadastro">
+	<h1>  Permissão </h1>
+    <fieldset>
+    	<legend>Cadastro de Permissões</legend>
+		<%= link_to 'Novo', new_permissao_path, :class => "novo"  %>
+      	<input type="text" name="txtPesquisa" id="txtPesquisa" />
+      	<%=submit_tag 'Pesquisar'%>
 
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Descricao</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @permissaos.each do |permissao| %>
-  <tr>
-    <td><%= permissao.nome %></td>
-    <td><%= permissao.descricao %></td>
-    <td><%= link_to 'Show', permissao %></td>
-    <td><%= link_to 'Edit', edit_permissao_path(permissao) %></td>
-    <td><%= link_to 'Destroy', permissao, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Permissao', new_permissao_path %>
+		<table>
+		  <tr>
+		    <th>Nome</th>
+		    <th>Descricao</th>
+		    <th>Editar</th>
+		    <th>Exibir</th>
+		  </tr>
+			
+			<% @permissaos.each do |permissao| %>
+			  <tr>
+			    <td><%= permissao.nome %></td>
+			    <td><%= permissao.descricao %></td>
+			    <td><%= link_to 'Editar', edit_permissao_path(permissao) %></td>
+			    <td><%= link_to 'Excluir', permissao, :confirm => 'Deseja excluir?', :method => :delete %></td>
+			  </tr>
+			<% end %>
+		</table>
+	</fieldset>
+</div>

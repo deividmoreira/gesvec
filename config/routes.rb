@@ -1,4 +1,8 @@
 Gesvec::Application.routes.draw do
+  resources :motorista
+
+  resources :veiculos
+
   resources :permissaos
 
   resources :usuarios
@@ -7,7 +11,9 @@ Gesvec::Application.routes.draw do
   
   resources :perfils do
   	resources :usuarios
+  	resources :permissaos
   end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

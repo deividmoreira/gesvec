@@ -6,7 +6,7 @@ jQuery(document).ready(function() {
 	jQuery('input.maskData').datepicker({
 		dayNamesMin: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
 		monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-		dateFormat: 'dd/mm/yy', showOn: 'button', buttonImage: 'imagens/calendar.png', buttonImageOnly: true
+		dateFormat: 'dd/mm/yy', showOn: 'button', buttonImage: '/images/calendar.png', buttonImageOnly: true
 	});
 	jQuery('input.maskCpf').setMask('cpf');	
 	jQuery('input.maskData').setMask('date');

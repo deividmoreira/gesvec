@@ -1,0 +1,39 @@
+<div id="cadastro">
+	<h1>  Veículo </h1>
+    <fieldset>
+    	<legend>Cadastro de Veículos</legend>
+    	<%= link_to 'Novo', new_veiculo_path, :class => "novo"  %>
+      	<input type="text" name="txtPesquisa" id="txtPesquisa" />
+      	<%=submit_tag 'Pesquisar'%>
+		<table>
+		  <tr>
+		    <th>Placa</th>
+		    <th>Chassi</th>
+		    <th>Renavam</th>
+		    <th>Serie</th>
+		    <th>Ano fabricacao</th>
+		    <th>Ano modelo</th>
+		    <th>Possui seguro</th>
+		    <th>Data cadastro</th>
+		    <th>Editar</th>
+		    <th>Excluir</th>
+		  </tr>
+		
+		<% @veiculos.each do |veiculo| %>
+		  <tr>
+		    <td><%= veiculo.placa %></td>
+		    <td><%= veiculo.chassi %></td>
+		    <td><%= veiculo.renavam %></td>
+		    <td><%= veiculo.serie %></td>
+		    <td><%= veiculo.ano_fabricacao %></td>
+		    <td><%= veiculo.ano_modelo %></td>
+		    <td><%= veiculo.possui_seguro %></td>
+		    <td><%= veiculo.data_cadastro %></td>
+		    <td><%= link_to 'Edit', edit_veiculo_path(veiculo) %></td>
+		    <td><%= link_to 'Destroy', veiculo, :confirm => 'Deseja excluir?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+	</fieldset>
+</div>		
+

@@ -1,41 +1,47 @@
-<%= form_for(@usuario) do |f| %>
-  <% if @usuario.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+<div id="cadastro">
+	<h1>  Usuários </h1>
+    <fieldset class="pequeno">
+    	<legend>Cadastro de Usuários</legend>	
 
-      <ul>
-      <% @usuario.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :cpf %><br />
-    <%= f.text_field :cpf, :class=>'maskCpf' %>
-  </div>
-  <div class="field">
-    <%= f.label :matricula %><br />
-    <%= f.text_field :matricula %>
-  </div>
-  <div class="field">
-    <%= f.label 'Perfil' %><br />
-    <%= f.collection_select(:perfil_id, Perfil.order(:nome), :id, :nome, {:prompt => true}) %>
-  </div>
-  <div class="field">
-    <%= f.label :login %><br />
-    <%= f.text_field :login %>
-  </div>
-  <div class="field">
-    <%= f.label :senha %><br />
-    <%= f.password_field :senha %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+		<%= form_for(@usuario) do |f| %>
+		  <% if @usuario.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+		
+		      <ul>
+		      <% @usuario.errors.full_messages.each do |msg| %>
+		        <li><%= msg %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+		
+		  <div class="field">
+		    <%= f.label :nome %><br />
+		    <%= f.text_field :nome %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :cpf %><br />
+		    <%= f.text_field :cpf, :class=>'maskCpf' %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :matricula %><br />
+		    <%= f.text_field :matricula %>
+		  </div>
+		  <div class="field">
+		    <%= f.label 'Perfil' %><br />
+		    <%= f.collection_select(:perfil_id, Perfil.order(:nome), :id, :nome, {:prompt => true}) %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :login %><br />
+		    <%= f.text_field :login %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :senha %><br />
+		    <%= f.password_field :senha %>
+		  </div>
+		  <div class="actions">
+		    <%= f.submit %>
+		    <%= link_to 'Back', usuarios_path %>
+		  </div>
+		<% end %>

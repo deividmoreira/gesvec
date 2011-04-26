@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Placa:</b>
+  <%= @veiculo.placa %>
+</p>
+
+<p>
+  <b>Chassi:</b>
+  <%= @veiculo.chassi %>
+</p>
+
+<p>
+  <b>Renavam:</b>
+  <%= @veiculo.renavam %>
+</p>
+
+<p>
+  <b>Serie:</b>
+  <%= @veiculo.serie %>
+</p>
+
+<p>
+  <b>Ano fabricacao:</b>
+  <%= @veiculo.ano_fabricacao %>
+</p>
+
+<p>
+  <b>Ano modelo:</b>
+  <%= @veiculo.ano_modelo %>
+</p>
+
+<p>
+  <b>Possui seguro:</b>
+  <%= @veiculo.possui_seguro %>
+</p>
+
+<p>
+  <b>Data cadastro:</b>
+  <%= @veiculo.data_cadastro %>
+</p>
+
+
+<%= link_to 'Edit', edit_veiculo_path(@veiculo) %> |
+<%= link_to 'Back', veiculos_path %>

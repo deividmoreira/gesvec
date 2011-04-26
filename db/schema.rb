@@ -10,12 +10,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110420164923) do
+ActiveRecord::Schema.define(:version => 20110426171232) do
+
+  create_table "combustivels", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "modelos", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "perfils", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "permissao_id"
+  end
+
+  create_table "perfils_permissoes", :id => false, :force => true do |t|
+    t.integer "perfil_id"
+    t.integer "restaurante_id"
   end
 
   create_table "permissaos", :force => true do |t|
@@ -34,6 +52,21 @@ ActiveRecord::Schema.define(:version => 20110420164923) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "perfil_id"
+  end
+
+  create_table "veiculos", :force => true do |t|
+    t.string   "placa"
+    t.string   "chassi"
+    t.string   "renavam"
+    t.string   "serie"
+    t.integer  "ano_fabricacao"
+    t.integer  "ano_modelo"
+    t.boolean  "possui_seguro"
+    t.date     "data_cadastro"
+    t.integer  "combustivel_id"
+    t.integer  "modelo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

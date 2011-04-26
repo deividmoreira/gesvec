@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  cpf: MyString
+  cnh: MyString
+  status: 1
+  data_validade: 2011-04-26
+
+two:
+  nome: MyString
+  cpf: MyString
+  cnh: MyString
+  status: 1
+  data_validade: 2011-04-26

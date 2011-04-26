@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  placa: MyString
+  chassi: MyString
+  renavam: MyString
+  serie: MyString
+  ano_fabricacao: 1
+  ano_modelo: 1
+  possui_seguro: false
+  data_cadastro: 2011-04-26
+
+two:
+  placa: MyString
+  chassi: MyString
+  renavam: MyString
+  serie: MyString
+  ano_fabricacao: 1
+  ano_modelo: 1
+  possui_seguro: false
+  data_cadastro: 2011-04-26

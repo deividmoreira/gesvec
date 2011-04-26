@@ -44,7 +44,7 @@ class PermissaosController < ApplicationController
 
     respond_to do |format|
       if @permissao.save
-        format.html { redirect_to(@permissao, :notice => 'Permissao was successfully created.') }
+        format.html { redirect_to(permissaos_url) }
         format.xml  { render :xml => @permissao, :status => :created, :location => @permissao }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class PermissaosController < ApplicationController
 
     respond_to do |format|
       if @permissao.update_attributes(params[:permissao])
-        format.html { redirect_to(@permissao, :notice => 'Permissao was successfully updated.') }
+        format.html { redirect_to(permissaos_url) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
