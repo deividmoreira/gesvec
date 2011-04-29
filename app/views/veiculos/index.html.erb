@@ -8,9 +8,8 @@
 		<table>
 		  <tr>
 		    <th>Placa</th>
-		    <th>Chassi</th>
-		    <th>Renavam</th>
-		    <th>Serie</th>
+		    <th>Modelo</th>
+		    <th>Combustivel</th>
 		    <th>Ano fabricacao</th>
 		    <th>Ano modelo</th>
 		    <th>Possui seguro</th>
@@ -22,15 +21,14 @@
 		<% @veiculos.each do |veiculo| %>
 		  <tr>
 		    <td><%= veiculo.placa %></td>
-		    <td><%= veiculo.chassi %></td>
-		    <td><%= veiculo.renavam %></td>
-		    <td><%= veiculo.serie %></td>
+		    <td><%= veiculo.modelo.nome %></td>
+		    <td><%= veiculo.combustivel.nome %></td>
 		    <td><%= veiculo.ano_fabricacao %></td>
 		    <td><%= veiculo.ano_modelo %></td>
 		    <td><%= veiculo.possui_seguro %></td>
-		    <td><%= veiculo.data_cadastro %></td>
-		    <td><%= link_to 'Edit', edit_veiculo_path(veiculo) %></td>
-		    <td><%= link_to 'Destroy', veiculo, :confirm => 'Deseja excluir?', :method => :delete %></td>
+		    <td><%= veiculo.data_cadastro.to_s_br%></td>
+		    <td><%= link_to 'Editar', edit_veiculo_path(veiculo) %></td>
+		    <td><%= link_to 'Excluir', veiculo, :confirm => 'Deseja excluir?', :method => :delete %></td>
 		  </tr>
 		<% end %>
 		</table>

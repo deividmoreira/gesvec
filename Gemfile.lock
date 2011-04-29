@@ -29,6 +29,36 @@ GEM
       activesupport (= 3.0.6)
     activesupport (3.0.6)
     arel (2.0.9)
+    brI18n (3.0.4)
+      actionpack (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    brazilian-rails (3.0.4)
+      brI18n (= 3.0.4)
+      brcep (= 3.0.4)
+      brcpfcnpj (= 3.0.4)
+      brdata (= 3.0.4)
+      brdinheiro (= 3.0.4)
+      brhelper (= 3.0.4)
+      brnumeros (= 3.0.4)
+      brstring (= 3.0.4)
+    brcep (3.0.4)
+    brcpfcnpj (3.0.4)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    brdata (3.0.4)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    brdinheiro (3.0.4)
+      actionpack (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      brnumeros (= 3.0.4)
+    brhelper (3.0.4)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    brnumeros (3.0.4)
+    brstring (3.0.4)
+      activesupport (>= 3.0.0)
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -64,10 +94,13 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.26)
+    will_paginate (2.3.15)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  brazilian-rails
   rails (= 3.0.6)
   sqlite3
+  will_paginate

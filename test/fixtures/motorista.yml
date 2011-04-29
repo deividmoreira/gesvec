@@ -4,12 +4,12 @@ one:
   nome: MyString
   cpf: MyString
   cnh: MyString
-  status: 1
-  data_validade: 2011-04-26
+  data_validade: 2011-04-29
+  status: false
 
 two:
   nome: MyString
   cpf: MyString
   cnh: MyString
-  status: 1
-  data_validade: 2011-04-26
+  data_validade: 2011-04-29
+  status: false

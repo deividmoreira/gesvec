@@ -227,6 +227,10 @@ hr
 	margin-bottom: 1px;
 }
 
+#error_explanation{
+	color: #CC0000;
+}
+
 #cadastro 
 {
 	margin-top: 10px;

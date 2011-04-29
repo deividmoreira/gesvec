@@ -1,31 +1,32 @@
-<h1>Listing motorista</h1>
-
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Cpf</th>
-    <th>Cnh</th>
-    <th>Status</th>
-    <th>Data validade</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @motorista.each do |motoristum| %>
-  <tr>
-    <td><%= motoristum.nome %></td>
-    <td><%= motoristum.cpf %></td>
-    <td><%= motoristum.cnh %></td>
-    <td><%= motoristum.status %></td>
-    <td><%= motoristum.data_validade %></td>
-    <td><%= link_to 'Show', motoristum %></td>
-    <td><%= link_to 'Edit', edit_motoristum_path(motoristum) %></td>
-    <td><%= link_to 'Destroy', motoristum, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Motoristum', new_motoristum_path %>
+<div id="cadastro">
+	<h1>  Perfil </h1>
+    <fieldset class="pequeno">
+    	<legend>Cadastro de Motoristas</legend>	
+		<%= link_to 'Novo', new_motoristum_path, :class => "novo"  %>
+      	<input type="text" name="txtPesquisa" id="txtPesquisa" />
+      	<%=submit_tag 'Pesquisar'%>
+		<table>
+		  <tr>
+		    <th>Nome</th>
+		    <th>Cpf</th>
+		    <th>Cnh</th>
+		    <th>Data validade</th>
+		    <th>Status</th>
+		    <th>Editar</th>
+		    <th>Excluir</th>
+		  </tr>
+		
+		<% @motorista.each do |motoristum| %>
+		  <tr>
+		    <td><%= motoristum.nome %></td>
+		    <td><%= motoristum.cpf %></td>
+		    <td><%= motoristum.cnh %></td>
+		    <td><%= motoristum.data_validade %></td>
+		    <td><%= motoristum.status %></td>
+		    <td><%= link_to 'Editar', edit_motoristum_path(motoristum) %></td>
+		    <td><%= link_to 'Excluir', motoristum, :confirm => 'Deseja excluir?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+	</fieldset>
+</div>		

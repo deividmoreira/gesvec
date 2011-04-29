@@ -1,3 +1,3 @@
 class Combustivel < ActiveRecord::Base
-	belongs_to :veiculo
+	has_many :veiculos
 end

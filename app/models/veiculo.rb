@@ -1,5 +1,5 @@
 class Veiculo < ActiveRecord::Base
-	has_many :combustivels
+	belongs_to :combustivel
 	belongs_to :modelo
 	
 	validates_associated :combustivel, :modelo

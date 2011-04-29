@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
 	
 	jQuery('select.autocomplete').select_autocomplete();
 	
-	jQuery('input.maskData').datepicker({
+	jQuery('select.maskData').datepicker({
 		dayNamesMin: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
 		monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
 		dateFormat: 'dd/mm/yy', showOn: 'button', buttonImage: '/images/calendar.png', buttonImageOnly: true
